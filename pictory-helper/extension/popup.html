@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AstroStarVibes Pictory Helper</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>✦ AstroStarVibes</h1>
+  <label for="raw">Paste the JSON block Claude wrote from Channel Stats</label>
+  <textarea id="raw" rows="7" spellcheck="false"></textarea>
+  <div class="row">
+    <button id="import" class="primary">Import</button>
+    <button id="open">Open Pictory</button>
+  </div>
+  <p id="msg" role="status" aria-live="polite"></p>
+  <h2>Packages</h2>
+  <ul id="list"></ul>
+  <script src="lib/package.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
