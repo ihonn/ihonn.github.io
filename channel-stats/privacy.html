@@ -20,9 +20,9 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted"> Channel Stats · Last updated: October 21, 2026</p>
+  <p class="muted"> Channel Stats · Last updated: October 22, 2026</p>
 
-  <p> Channel Stats ("the tool") is a personal, read-only tool that lets its owner view data about their own YouTube channel inside the Claude Desktop app. This policy explains what data the tool accesses and how it is handled.</p>
+  <p> Channel Stats ("the tool") is a personal tool that lets its owner view data about their own YouTube channel, and upload their own videos to it, inside the Claude Desktop app. This policy explains what data the tool accesses and how it is handled.</p>
 
   <h2>Data the tool accesses</h2>
   <p>Only after the channel owner signs in with Google and grants permission, the tool reads:</p>
@@ -30,17 +30,19 @@
     <li>Channel information (name, subscriber count, total views, list of uploaded videos and their public statistics) through the YouTube Data API v3, scope <code>youtube.readonly</code>.</li>
     <li>YouTube Analytics reports for the owner's channel (views, watch time, audience and traffic breakdowns) through the YouTube Analytics API, scope <code>yt-analytics.readonly</code>.</li>
     <li>Estimated revenue and ad performance reports for the owner's channel, scope <code>yt-analytics-monetary.readonly</code>.</li>
+    <li>Permission to upload videos to the owner's channel through the YouTube Data API v3, scope <code>youtube.upload</code>. The tool uses it only when the owner asks it to upload a specific video file, and sends that file with the title, description, tags and optional thumbnail the owner has approved. Uploads are private unless the owner chooses otherwise.</li>
   </ul>
-  <p>All access is read-only. The tool cannot upload, edit or delete anything on YouTube.</p>
+  <p>Apart from uploads the owner asks for, all access is read-only. The tool cannot edit or delete existing videos, playlists, comments or channel settings.</p>
 
   <h2>How the data is used</h2>
-  <p>Data is used only to show statistics and reports to the channel owner. It is not used for advertising, profiling or any other purpose.</p>
+  <p>Data is used only to show statistics and reports to the channel owner and to upload the videos the owner chooses. It is not used for advertising, profiling or any other purpose.</p>
 
   <h2>Storage and sharing</h2>
   <ul>
     <li>The Google sign-in token is stored only on the owner's own computer (folder <code>.youtube-channel-stats-mcp</code> in the home folder). The tool has no server of its own.</li>
     <li>Reports are shown to the owner in Claude Desktop, an AI assistant made by Anthropic. When the owner asks Claude about their channel, the requested data is processed by that service as part of the owner's own conversation, under Anthropic's terms and privacy policy.</li>
     <li>CSV exports, when requested by the owner, are saved only to a folder on the owner's computer.</li>
+    <li>Video and thumbnail files chosen for upload are read from the owner's computer and sent only to YouTube. The tool keeps no copy of them.</li>
     <li>Data is never sold, and is not shared with anyone else.</li>
   </ul>
   <p>The tool's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
